@@ -35,6 +35,5 @@ test.afterEach(async ({ page }, testInfo) => {
                 expect(navigationLinks).toContain(name.toLocaleUpperCase());
             });
         });
-
     });
 });

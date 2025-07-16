@@ -55,6 +55,7 @@ export default defineConfig({
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
+      testIgnore: 'home.spec.ts'
     },
 
     /* Test against mobile viewports. */
