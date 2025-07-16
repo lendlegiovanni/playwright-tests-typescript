@@ -25,8 +25,11 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  captureGitInfo: { 
+    commit: true,
+    diff: true
+  },
   use: {
-    channel: 'chrome',
     headless: true,
     ignoreHTTPSErrors: true,
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
@@ -47,11 +50,6 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-    },
-
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
     },
 
     {
